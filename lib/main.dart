@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(const FloatingActionButtonExampleApp());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    const appTitle = 'Form Styling Demo';
-    return MaterialApp(
-      title: appTitle,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text(appTitle),
-        ),
-        body: const MyCustomForm(),
-      ),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     const appTitle = 'Form Styling Demo';
+//     return MaterialApp(
+//       title: appTitle,
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: const Text(appTitle),
+//         ),
+//         body: const MyCustomForm(),
+//       ),
+//     );
+//   }
+// }
 
 class MyCustomForm extends StatelessWidget {
   const MyCustomForm({super.key});
@@ -51,13 +51,6 @@ class MyCustomForm extends StatelessWidget {
   }
 }
 
-import 'package:flutter/material.dart'; 
-
-/// Flutter code sample for [FloatingActionButton].
-
-void main() {
-  runApp(const FloatingActionButtonExampleApp());
-}
 
 class FloatingActionButtonExampleApp extends StatelessWidget {
   const FloatingActionButtonExampleApp({super.key});
@@ -95,13 +88,13 @@ class _FloatingActionButtonExampleState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('FloatingActionButton Sample'),
+        title: const Text('Cypher Application'),
       ),
-      body: const Center(child: Text('Press the button below!')),
+      body: const Center(child: MyCustomForm()),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {
-            //index = (index + 1) % customizations.length;
+            index = (index + 1) % customizations.length;
           });
         },
         foregroundColor: customizations[index].$1,
